@@ -1,0 +1,7 @@
+2) 
+x=*p++ //Will assign the second value of the array to x
+
+x=(*p)++ //Increment the first value of the array by one.
+
+3) 
+Illegal options: c,e,f,h,i 

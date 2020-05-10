@@ -1,0 +1,14 @@
+1. Segmentation fault occurs when the code tries to access 
+any type of data that is not statically alloted by the compiler yet.
+
+2. Variable length array is stored on stack 
+whereas dynamic memory allocation occurs in the heap
+
+3.
+A pointer pointing to a memory location that has been deleted (or freed) 
+is called dangling pointer.
+
+A pointer which is pointing to nothing is a NULL pointer
+
+A pointer which has not been initialized to anything (not even NULL) 
+but only declared is known as wild pointer.
