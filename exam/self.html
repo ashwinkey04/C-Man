@@ -1,0 +1,320 @@
+<html>
+
+<body>
+    <table class="matrixHeading">
+        <tbody>
+            <tr class="matrixHeadingBG">
+                <td colspan="2" valign="top">
+                    <div class="matrixHeadingVerbs">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>RESOURCES</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+                <td>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="matrixHeadingVerbs">POST</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="matrixHeadingCommands">create/complex
+                                        update</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="matrixHeadingVerbs">GET</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="matrixHeadingCommands">read</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="matrixHeadingVerbs">PUT</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="matrixHeadingCommands">update</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="matrixHeadingVerbs">DELETE</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="matrixHeadingCommands">delete</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#selfbasicauth">Authentication HTTP Basic</a></td>
+                <td>self/authentication</td>
+                <td></td>
+                <td><a href="#selfbasicauth">Verify Authentication</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="#selfoauth">Authentication Oauth2</a></td>
+                <td>self/userdetails</td>
+                <td></td>
+                <td><a href="#selfoauth">Fetch Authenticated User Details</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="#selfuser">Update User</a></td>
+                <td>self/user</td>
+                <td></td>
+                <td></td>
+                <td><a href="#selfuser">Update User</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="#selflistclients">Clients</a></td>
+                <td>self/clients</td>
+                <td></td>
+                <td><a href="#selflistclients">List Clients</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/clients/{clientId}</td>
+                <td></td>
+                <td><a href="#selfclient">Retrieve Client</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/clients/{clientId}/accounts</td>
+                <td></td>
+                <td><a href="#selfclientsaccounts">Retrieve Client Accounts Overview</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/clients/{clientId}/images</td>
+                <td></td>
+                <td><a href="#selfclientsimages">Retrieve Client Image</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/clients/{clientId}/charges</td>
+                <td></td>
+                <td><a href="#selfclientscharges">List Client Charges</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/clients/{clientId}/charges/{chargeId}</td>
+                <td></td>
+                <td><a href="#selfclientscharge">Retrieve a Client Charge</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/clients/{clientId}/transactions</td>
+                <td></td>
+                <td><a href="#selfclienttransactions">List Client Transactions</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/clients/{clientId}/transactions/{transactionId}</td>
+                <td></td>
+                <td><a href="#selfclienttransaction">Retrieve a Client Transaction</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="#selfloantemplate">Loans</a></td>
+                <td>self/loans/template?templateType=individual</td>
+                <td></td>
+                <td><a href="#selfloantemplate">Loan Application Template</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/loans?command=calculateLoanSchedule</td>
+                <td><a href="#selfloancalc">Calculate Loan Repayment Schedule</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/loans</td>
+                <td><a href="#selfloanapply">Submit new Loan Application</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/loans/{loanId}</td>
+                <td></td>
+                <td><a href="#selfloan">Retrieve a Loan</a></td>
+                <td><a href="#selfloanupdate">Update a Loan Application</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/loans/{loanId}?command=withdrawnByApplicant</td>
+                <td><a href="#selfloanwithdraw">Withdraw Loan Application</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/loans/{loanId}/transactions/{transactionId}</td>
+                <td></td>
+                <td><a href="#selfloantransaction">Retrieve a Loan Transaction Details</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/loans/{loanId}/charges</td>
+                <td></td>
+                <td><a href="#selfloancharges">Retrieve Loan Charges</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/loans/{loanId}/charges/{chargeId}</td>
+                <td></td>
+                <td><a href="#selfloancharge">Retrieve a Loan Charge Details</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="#selfsavings">Savings</a></td>
+                <td>self/savingsaccounts/{accountId}</td>
+                <td></td>
+                <td><a href="#selfsavings">Retrieve a Savings Account</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/savingsaccounts/{accountId}/transactions/{transactionId}</td>
+                <td></td>
+                <td><a href="#selfsavingstransaction">Retrieve a Savings Transaction Details</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/savingsaccounts/{accountId}/charges</td>
+                <td></td>
+                <td><a href="#selfsavingscharges">Retrieve Savings Charges</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/savingsaccounts/{accountId}/charges/{savingsAccountChargeId}</td>
+                <td></td>
+                <td><a href="#selfsavingscharge">Retrieve a Savings Charge Details</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="#selftransfertemplate">Own Account Transfers</a></td>
+                <td>self/accounttransfers/template</td>
+                <td></td>
+                <td><a href="#selftransfertemplate">Account Transfer Template</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/accounttransfers</td>
+                <td><a href="#selftransfer">Account Transfer</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="#selfbentemplate">Beneficiary for Third Party Transfer</a></td>
+                <td>/self/beneficiaries/tpt/template</td>
+                <td></td>
+                <td><a href="#selfbentemplate">Beneficiary TPT Template</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>/self/beneficiaries/tpt</td>
+                <td><a href="#selfaddtpt">Add TPT Beneficiary</a></td>
+                <td><a href="#selfgettpt">Get TPT Beneficiary List</a></td>
+                <td><a href="#selfputtpt">Update TPT Beneficiary</a></td>
+                <td><a href="#selfdeletetpt">Delete TPT Beneficiary</a></td>
+            </tr>
+            <tr>
+                <td><a href="#selftpttransfertemplate">Third Party Account Transfers</a></td>
+                <td>self/accounttransfers/template?type="tpt"</td>
+                <td></td>
+                <td><a href="#selftpttransfertemplate">Third Party Account Transfer Template</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>self/accounttransfers?type="tpt"</td>
+                <td><a href="#selftpttransfer">Third Party Account Transfer</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

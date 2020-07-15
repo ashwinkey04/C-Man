@@ -1,11 +1,15 @@
-// Ashwin
-// R.No: 19343
-// Date: May 8
+/*
+    By
+        Anand K S
+        CSE-B
+        AM.EN.U4CSE19106
 
+        Program to get strings and sort them using pointers*/
+
+        
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-
 
 void sort(char **s,int n)
 {
@@ -31,8 +35,8 @@ int main()
 {  
 	char word[50],**s; 
 	int n, i; 
-    	s = (char**)malloc(n*sizeof(char*));
-	printf("Enter the number of strings: "); 
+    s = (char**)malloc(n*sizeof(char*));
+	printf("Enter the number of strings :"); 
 	scanf("%d", &n); 
 	printf("\nEnter the strings to be sorted:\n");
 	for (i = 0; i < n; i++) 
@@ -50,4 +54,3 @@ int main()
 	free(s); 
 	return 0; 
 }
-
